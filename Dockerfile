@@ -1,7 +1,7 @@
 FROM python
-USER ec2-user
+
 WORKDIR /app
-RUN sudo usermod -aG docker ec2-user
+
 
 COPY . .
 RUN pip install -r requirements.txt
