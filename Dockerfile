@@ -1,10 +1,11 @@
 FROM python
+USER ec2-user
 WORKDIR /app
+RUN sudo usermod -aG docker ec2-user
+
 COPY . .
 RUN pip install -r requirements.txt
-#RUN chown -R admin:admin /app
-#RUN chmod 755 /app
-#USER admin
+
 ENV FLASK_APP=app.py
 EXPOSE 5000
 CMD ["flask", "run", "--host=0.0.0.0"] 
