@@ -4,6 +4,8 @@ pipeline {
         stage('Hello World') {
             steps {
                 echo 'Hello world!' 
+                docker --version
+                python --version
             }
         }
     }
