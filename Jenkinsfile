@@ -4,8 +4,8 @@ pipeline {
         stage('Hello World') {
             steps {
                 echo 'Hello world!' 
-                bat 'docker --version'
-                bat 'python --version'
+                ss 'docker --version'
+                ss 'python --version'
             }
         }
     }
