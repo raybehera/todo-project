@@ -8,6 +8,7 @@ pipeline {
                 docker --version
                 python --version
                 docker build -t my_flask_image_1 .
+                
                 '''
 
                  
